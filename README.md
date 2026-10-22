@@ -5,10 +5,14 @@
 - **과정**: 동아일보 부트캠프 · [미디어 프론티어] 생성형 AI 마스터 클래스 (콘텐츠 플랫폼 개발)
 - **기간**: 2026.09.28 ~ 2026.11.09 (팀 프로젝트)
 - **기술 스택**: Next.js · React(TypeScript) · Supabase(PostgreSQL · Auth · Storage) · OpenAI API
+•	배포: https://genz-project-one.vercel.app
+•	코드: https://github.com/genz-pyoryugi/genz-project
+
+
 
 ---
 
-## 🙋 내 담당 (혜란)
+## 🙋 내 담당 
 
 | 영역 | 한 일 |
 | --- | --- |

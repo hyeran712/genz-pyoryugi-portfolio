@@ -217,12 +217,3 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
 | 체크리스트 | `/checklist` |
 | 퀴즈 | `/quiz` |
 | 캘린더 | `/calendar` |
-
----
-
-## 👥 팀원 파트
-
-### 💬 커뮤니티 파트 (설아)
-- **주요 기능**: 생존 매뉴얼 책 위의 3M 포스트잇 고민 메모, 테이프 조언 덧글, 젠지 오피스 스티커 보관함
-- **확인 경로**: `/community`
-- **컴포넌트 위치**: `src/components/community/`

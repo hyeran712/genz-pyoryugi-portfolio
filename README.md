@@ -147,6 +147,67 @@ erDiagram
 
 ---
 
+## 💡 핵심 코드
+
+### ① Supabase에서 체크리스트 불러오기 — `src/app/api/checklists/route.ts`
+
+```ts
+export async function GET() {
+  const [saved, materials] = await Promise.all([
+    supabase
+      .from('checklists')
+      .select('id,category,title,item1,item2,item3,item4,item5,description,source_url')
+      .eq('status', '완료')                       // 검수 완료된 항목만
+      .order('id', { ascending: true }),
+    supabase.from('contents').select('title,category,url').order('id'),
+  ]);
+  if (saved.error || materials.error) {
+    return NextResponse.json({ error: '체크리스트를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.' }, { status: 502 });
+  }
+  // 저장된 미션 + 근거 PDF 기반 활동을 합쳐서 JSON으로 응답
+  const pdfRows = linkedPdfRows(materials.data ?? [], process.env.NEXT_PUBLIC_SUPABASE_URL!);
+  return NextResponse.json([...(saved.data ?? []), ...pdfRows]);
+}
+```
+
+> Supabase에 올린 데이터 중 **검수가 끝난 항목만** 골라 화면에 보내고, 연결에 실패하면 사용자에게 안내 문구를 돌려줘요.
+
+### ② 내 기록만 보이게 하는 RLS 정책 — `supabase/migrations/202610150001_checklist_completions.sql`
+
+```sql
+alter table public.checklist_completions enable row level security;
+
+create policy "Read own completions" on public.checklist_completions
+  for select to authenticated using ((select auth.uid()) = user_id);
+create policy "Insert own completions" on public.checklist_completions
+  for insert to authenticated with check ((select auth.uid()) = user_id);
+```
+
+> 로그인한 사용자 ID(`auth.uid()`)와 기록의 `user_id`가 같을 때만 조회 · 저장할 수 있어서, **다른 사람의 체크 기록은 볼 수도 고칠 수도 없어요.**
+
+### ③ 책상 메모 드래그 — `public/intro/js/desk-notes.js`
+
+```js
+summary.addEventListener('pointerdown', event => {
+  const bounds = card.getBoundingClientRect();
+  pointer = { id: event.pointerId, x: event.clientX, y: event.clientY,
+              left: bounds.left, top: bounds.top, moved: false };
+  summary.setPointerCapture(event.pointerId);
+});
+summary.addEventListener('pointermove', event => {
+  if (!pointer || pointer.id !== event.pointerId) return;
+  const dx = event.clientX - pointer.x, dy = event.clientY - pointer.y;
+  if (!pointer.moved && Math.hypot(dx, dy) < 5) return;   // 5px 미만은 클릭으로 처리
+  pointer.moved = true;
+  moveCard(card, pointer.left + dx, pointer.top + dy);
+});
+// 손을 떼면 위치 저장 → 다음 방문 때도 같은 자리에 표시
+```
+
+> 마우스 · 터치 모두 쓸 수 있는 Pointer 이벤트로 메모를 끌어 옮기고, **조금만 움직였을 때는 클릭으로 구분**해서 메모 열기와 드래그가 헷갈리지 않게 했어요. 키보드 방향키로도 옮길 수 있어요.
+
+---
+
 ## 🤖 5. AI 활용 — 디자인 제작
 
 퀴즈 · 체크리스트 · 캘린더 디자인을 **이미지 생성 AI**로 만들었어요. 원하는 결과가 나오도록 프롬프트를 *비주얼 특징 / 화면 구성 / 조건*으로 나눠 설계했어요.

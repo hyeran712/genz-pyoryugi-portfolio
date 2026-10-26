@@ -8,6 +8,7 @@
 
 - **배포**: https://genz-project-one.vercel.app
 - **코드**: https://github.com/genz-pyoryugi/genz-project
+- **PPT**: https://genz-pyoryugi-hyeran.netlify.app/
 
 ---
 

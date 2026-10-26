@@ -28,7 +28,7 @@
 
 ### 🎬 사용 시연
 
-<img src="docs/portfolio/checklist-demo.gif" alt="체크리스트 사용 시연" width="760">
+<img src="./checklist-demo.gif" alt="체크리스트 사용 시연" width="760">
 
 | 체크 전 | 모두 체크 → 완료 기록 저장 |
 | :---: | :---: |
@@ -44,7 +44,7 @@
 
 ### 📌 책상 메모 사용 시연
 
-<img src="docs/portfolio/desk-note-demo.gif" alt="책상에 메모 붙이기와 위치 이동 시연" width="760">
+<img src="./desk-note-demo.gif" alt="책상에 메모 붙이기와 위치 이동 시연" width="760">
 
 ---
 
@@ -54,7 +54,7 @@
 
 ### 🎬 사용 시연
 
-<img src="docs/portfolio/quiz-demo.gif" alt="퀴즈 풀이 시연" width="760">
+<img src="./quiz-demo.gif" alt="퀴즈 풀이 시연" width="760">
 
 | 단일 · 복수 선택 | 정답일 때 | 오답일 때 |
 | :---: | :---: | :---: |
@@ -77,7 +77,7 @@
 
 ### 🎬 사용 시연
 
-<img src="docs/portfolio/calendar-demo.gif" alt="캘린더 사용 시연" width="760">
+<img src="./calendar-demo.gif" alt="캘린더 사용 시연" width="760">
 
 | 주제별 달력 | 스티커 클릭 → 규정 안내 | OX 퀴즈 · 해설 |
 | :---: | :---: | :---: |

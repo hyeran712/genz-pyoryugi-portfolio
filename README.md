@@ -6,10 +6,8 @@
 - **기간**: 2026.09.28 ~ 2026.11.09 (팀 프로젝트)
 - **기술 스택**: Next.js · React(TypeScript) · Supabase(PostgreSQL · Auth · Storage) · OpenAI API
 
-•	배포: https://genz-project-one.vercel.app
-•	코드: https://github.com/genz-pyoryugi/genz-project
-
-
+- **배포**: https://genz-project-one.vercel.app
+- **코드**: https://github.com/genz-pyoryugi/genz-project
 
 ---
 
@@ -43,7 +41,8 @@
 - Supabase `checklists` 테이블의 주제 · 항목 · 출처를 불러와 표시
 - 완료 기록은 `checklist_completions`에 사용자별로 저장 (다른 사람 기록은 보이지 않도록 RLS 적용)
 - **[책상에 붙이기]**: 체크리스트를 메인 사무실 화면에 메모로 고정하고, 마우스로 끌어서 원하는 위치로 이동 · 위치 기억, 메모를 누르면 진행률 미리보기 후 체크리스트로 이동
-- ### 📌 책상 메모 사용 시연
+
+### 📌 책상 메모 사용 시연
 
 <img src="docs/portfolio/desk-note-demo.gif" alt="책상에 메모 붙이기와 위치 이동 시연" width="760">
 
@@ -75,7 +74,6 @@
 ## 📅 3. 취업규칙 스티커 캘린더 `/calendar`
 
 탁상달력에 붙은 스티커를 눌러 근로시간 · 휴일휴가 · 퇴직해고 규정을 배우고 OX 퀴즈로 확인해요.
-
 
 ### 🎬 사용 시연
 

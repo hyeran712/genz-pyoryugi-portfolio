@@ -28,6 +28,10 @@
 
 7개 주제별로 오늘 실천할 미션을 체크하고, 완료 기록을 저장해요. 모든 항목에는 **근거 자료**(PDF 페이지)가 연결돼 있어요.
 
+### 🎬 사용 시연
+
+<img src="docs/portfolio/checklist-demo.gif" alt="체크리스트 사용 시연" width="760">
+
 | 체크 전 | 모두 체크 → 완료 기록 저장 |
 | :---: | :---: |
 | <img src="docs/portfolio/checklist-start.png" width="360"> | <img src="docs/portfolio/checklist-done.png" width="360"> |
@@ -39,12 +43,19 @@
 - Supabase `checklists` 테이블의 주제 · 항목 · 출처를 불러와 표시
 - 완료 기록은 `checklist_completions`에 사용자별로 저장 (다른 사람 기록은 보이지 않도록 RLS 적용)
 - **[책상에 붙이기]**: 체크리스트를 메인 사무실 화면에 메모로 고정하고, 마우스로 끌어서 원하는 위치로 이동 · 위치 기억, 메모를 누르면 진행률 미리보기 후 체크리스트로 이동
+- ### 📌 책상 메모 사용 시연
+
+<img src="docs/portfolio/desk-note-demo.gif" alt="책상에 메모 붙이기와 위치 이동 시연" width="760">
 
 ---
 
 ## 📝 2. 회사 생활, 나라면? 퀴즈 `/quiz`
 
 카드뉴스로 배운 내용을 7개 주제별 퀴즈로 확인해요.
+
+### 🎬 사용 시연
+
+<img src="docs/portfolio/quiz-demo.gif" alt="퀴즈 풀이 시연" width="760">
 
 | 단일 · 복수 선택 | 정답일 때 | 오답일 때 |
 | :---: | :---: | :---: |
@@ -64,6 +75,11 @@
 ## 📅 3. 취업규칙 스티커 캘린더 `/calendar`
 
 탁상달력에 붙은 스티커를 눌러 근로시간 · 휴일휴가 · 퇴직해고 규정을 배우고 OX 퀴즈로 확인해요.
+
+
+### 🎬 사용 시연
+
+<img src="docs/portfolio/calendar-demo.gif" alt="캘린더 사용 시연" width="760">
 
 | 주제별 달력 | 스티커 클릭 → 규정 안내 | OX 퀴즈 · 해설 |
 | :---: | :---: | :---: |

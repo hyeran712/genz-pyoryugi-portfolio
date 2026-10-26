@@ -283,3 +283,7 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
 | 체크리스트 | `/checklist` |
 | 퀴즈 | `/quiz` |
 | 캘린더 | `/calendar` |
+
+**🏝️ 오늘도 무사히 퇴근!**
+
+<sub>Made with 💙 by 젠지 표류기 팀 · 동아일보 부트캠프 2026</sub>

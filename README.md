@@ -25,9 +25,9 @@
 
 ### 🧭 전체 작동 구조에서 내 담당 부분
 
-팀 전체 작동 구조 중 **청록 테두리(✓)**로 표시한 부분이 제가 맡은 영역입니다. 나머지 AI 팀장 · 라디오 · SOS 등은 팀원이 담당했습니다.
+팀 전체 작동 구조 중 <b>청록 테두리(✓)</b>로 표시한 부분이 제가 맡은 영역입니다. 나머지 AI 팀장 · 라디오 · SOS 등은 팀원이 담당했습니다.
 
-<img src="docs/portfolio/system-architecture-my-part.png" alt="젠지 표류기 전체 작동 구조 — 내 담당 부분 표시" width="100%">
+<img src="docs/portfolio/genz-architecture-my-part.png" alt="젠지 표류기 전체 작동 구조 — 내 담당 부분 표시" width="100%">
 
 | 구조도 위치 | 내 담당 |
 | --- | --- |
